@@ -14,6 +14,28 @@
 
 ]]
 
+print('orion-countyems made by Thompson#8886') --[[ DO NOT REMOVE ANY CREDITS ]]
+
+if Config.DisableCommand == false then
+
+  CommandCooldown = false
+
+  RegisterCommand(Config.Command, function(source)
+    if CommandCooldown == false then
+    local xUser = source
+    TriggerEvent('orion-countyems:CallEMS', xUser)
+    CommandCooldown = true
+    Wait(60000)
+    CommandCooldown = false
+    end
+
+    if CommandCooldown == true then
+        exports['t-notify']:Custom({ style  =  'error', duration  =  8000, message  =  'You must wait before using this command again!', sound  =  false })
+    end
+end)
+
+end
+
 CountyEMS = false
 
 TriggerEvent('chat:addSuggestion', '/'..Config.Command, 'Call the County EMS.')
