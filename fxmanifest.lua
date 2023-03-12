@@ -19,7 +19,7 @@ game 'gta5'
 
 author 'Thompson#8886' -- Do NOT remove any credits.
 description 'County EMS script.'
-version 'v1.0.0'
+version 'v1.0.1'
 
 ----------------------------------------
 ---------------- CLIENT ----------------
